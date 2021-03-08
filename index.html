@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UFT-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Practia 5</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+        <style>
+            body{
+                background-color: aqua;
+            }
+            #map{
+                width: 100%;
+                height: 600px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="container">
+                <div class="row">
+                    <div class="col.12">
+                        <div id="map"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            "use strict"; // Me permite poder omitir el ";" al final de cada sentencia.
+
+            function iniciaMapa(){
+                alert("entro") // Manda una alerta de que la funcion esta funcionando correctamente 
+
+
+                var propiedades = {
+                    center: {
+                        lat : 21.152639, lng : -101.711598
+                    },
+                    zoom: 14
+                }
+                const mapa = document.getElementById("map");
+                const map = new google.maps.Map(mapa,propiedades);
+            }
+        </script>
+
+            <!-- Bootstrap 5 beta -->
+         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+          <!-- Google Maps -->
+          <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAv-m46ebIV9fqkE2fIBGeWunmGmBm2R24&callback=iniciaMapa" async defer></script>
+    </body>
+</html>
